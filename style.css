@@ -83,8 +83,9 @@ pre {
   max-width: calc(100vw - 2rem);
   margin-left: 50%;
   transform: translateX(-50%);
-  font-size: min(0.8rem, (100vw - 2rem) / 66);
-  overflow: hidden;
+  font-size: 0.8rem;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .fastfetch b { color: #1d99f3; }
