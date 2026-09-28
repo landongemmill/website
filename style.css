@@ -77,3 +77,31 @@ pre {
   height: auto;
   display: block;
 }
+
+.fastfetch {
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-size: min(0.8rem, (100vw - 2rem) / 66);
+  overflow: hidden;
+}
+
+.fastfetch b { color: #1d99f3; }
+.fastfetch .w { color: var(--fg); }
+
+.fastfetch .palette {
+  display: inline-block;
+  width: 24ch;
+  height: 1.3em;
+  vertical-align: top;
+  background: linear-gradient(to right,
+    #232627 0 12.5%, #ed1515 0 25%, #11d116 0 37.5%, #f67400 0 50%,
+    #1d99f3 0 62.5%, #9b59b6 0 75%, #1abc9c 0 87.5%, #fcfcfc 0);
+}
+
+.fastfetch .palette.bright {
+  background: linear-gradient(to right,
+    #7f8c8d 0 12.5%, #c0392b 0 25%, #1cdc9a 0 37.5%, #fdbc4b 0 50%,
+    #3daee9 0 62.5%, #8e44ad 0 75%, #16a085 0 87.5%, #ffffff 0);
+}
