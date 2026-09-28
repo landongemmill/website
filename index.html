@@ -3,10 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Landon Gemmill">
-    <title>Landon Gemmill</title>
+    <title>Welcome · Landon Gemmill</title>
+    <meta name="description" content="My personal website / portfolio">
+    <meta name="author" content="Landon Gemmill">
+    <meta name="robots" content="index, follow, max-image-preview:large, noai, noimageai">
+    <meta name="tdm-reservation" content="1">
+    <link rel="canonical" href="https://gemmill.net/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Landon Gemmill">
+    <meta property="og:title" content="Landon Gemmill">
+    <meta property="og:description" content="My personal website / portfolio">
+    <meta property="og:url" content="https://gemmill.net/">
+    <meta property="og:image" content="https://gemmill.net/assets/icon.jpg">
+    <meta property="og:image:width" content="732">
+    <meta property="og:image:height" content="732">
+    <meta property="og:image:alt" content="Landon Gemmill">
+    <meta name="twitter:card" content="summary">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="gemmill.ico">
+    <link rel="icon" href="assets/favicon.ico">
+  </head>
+  <body>
     <main>
       <div class="center">
         <h1>Hi, I'm Landon</h1>
@@ -15,10 +33,10 @@
           <a href="photos.html">photos</a>
           <a href="friends.html">friends</a>
         </nav>
-        <section id="photo">
-          <img src="assets/icon.jpg" alt="Landon Gemmill">
-        </section>
       </div>
+      <section id="photo">
+        <img src="assets/icon.jpg" alt="Landon Gemmill" width="732" height="732">
+      </section>
       <section>
         <h2>about</h2>
         <p>I'm a second-year Regents Scholar at UC Santa Barbara pursuing a bachelor's degree in Computer Engineering.</p>
@@ -28,9 +46,24 @@
       <h2>contact / links</h2>
       <ul>
         <li><a href="mailto:landon@gemmill.net">email: landon@gemmill.net</a></li>
-        <li><a href="https://github.com/landongemmill">github: @landongemmill</a></li>
-        <li><a href="https://linkedin.com/in/landongemmill">linkedin: in/landongemmill</a></li>
+        <li><a href="https://github.com/landongemmill" rel="me">github: @landongemmill</a></li>
+        <li><a href="https://linkedin.com/in/landongemmill" rel="me">linkedin: in/landongemmill</a></li>
       </ul>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Landon Gemmill",
+        "url": "https://gemmill.net/",
+        "image": "https://gemmill.net/assets/icon.jpg",
+        "email": "mailto:landon@gemmill.net",
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "University of California, Santa Barbara" },
+        "sameAs": [
+          "https://github.com/landongemmill",
+          "https://linkedin.com/in/landongemmill"
+        ]
+      }
+      </script>
     </main>
-  </head>
+  </body>
 </html>
