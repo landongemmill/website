@@ -3,4 +3,4 @@ Made entirely with CSS / HTML, though that might change in the future. Includes 
 
 -> [gemmill.net](https://gemmill.net)
 
-[<img src="https://gemmill.net/assets/icon.jpg">]
+<img src="https://gemmill.net/assets/icon.jpg">
