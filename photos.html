@@ -32,6 +32,9 @@
           <a href="/">← back</a>
         </nav>
         <div id="gallery"></div>
+        <div id="overlay">
+          <img id="overlay-img">
+        </div>
         <script>
           const PHOTO_URL = "https://photos.gemmill.net/";
 
@@ -46,7 +49,16 @@
               img.src = PHOTO_URL + encodeURI(name);
               img.loading = "lazy";
               gallery.appendChild(img);
+
+              img.addEventListener("click", function () {
+                document.getElementById("overlay-img").src = img.src;
+                document.getElementById("overlay").classList.add("open");
+              });
             }
+
+            document.getElementById("overlay").addEventListener("click", function () {
+              document.getElementById("overlay").classList.remove("open");
+            });
           }
 
           loadPhotos();

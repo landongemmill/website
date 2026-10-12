@@ -62,6 +62,7 @@ pre {
   display: block;
 }
 
+/* The evil fastfetch element (this is really bad but i dont want to do scripting for it) */
 .fastfetch {
   width: max-content;
   max-width: calc(100vw - 2rem);
@@ -89,4 +90,41 @@ pre {
   background: linear-gradient(to right,
     #7f8c8d 0 12.5%, #c0392b 0 25%, #1cdc9a 0 37.5%, #fdbc4b 0 50%,
     #3daee9 0 62.5%, #8e44ad 0 75%, #16a085 0 87.5%, #ffffff 0);
+}
+
+/* Gallery stuff!!! This shows the images */
+#gallery {
+  width: min(100vw - 4rem, 1600px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+#gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* overlay stuff for clicking on images */
+#overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#overlay.open {
+  display: flex;
+}
+
+#overlay-img {
+  max-width: 95vw;
+  max-height: 95vh;
 }
