@@ -31,6 +31,26 @@
         <nav>
           <a href="/">← back</a>
         </nav>
+        <div id="gallery"></div>
+        <script>
+          const PHOTO_URL = "https://photos.gemmill.net/";
+
+          async function loadPhotos() {
+            const response = await fetch("/api/photos");
+            const fileNames = await response.json();
+
+            const gallery = document.getElementById("gallery");
+
+            for (const name of fileNames) {
+              const img = document.createElement("img");
+              img.src = PHOTO_URL + encodeURI(name);
+              img.loading = "lazy";
+              gallery.appendChild(img);
+            }
+          }
+
+          loadPhotos();
+        </script>
       </div>
     </main>
   </body>

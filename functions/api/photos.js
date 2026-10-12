@@ -7,10 +7,19 @@ export async function onRequest(context) {
   const bucket = context.env.PHOTOS;
   const result = await bucket.list();
 
-  const fileNames = [];
+  const files = [];
   for (const file of result.objects) {
-    fileNames.push(file.key);
+    if (!file.key.endsWith("/")) { // we dont want to return folders
+      files.push(file);
+    }
   }
 
-  return Response.json(fileNames);
+  files.sort((a, b) => b.uploaded - a.uploaded);
+
+  const fileNamesSorted = [];
+  for (const file of files) {
+    fileNamesSorted.push(file.key);
+  }
+
+  return Response.json(fileNamesSorted);
 }
