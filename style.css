@@ -47,7 +47,7 @@ section { margin-bottom: 4rem; }
 
 a { color: inherit; text-underline-offset: 5px; }
 a:hover { color: var(--muted); }
-ul { list-style: none; } 
+ul { list-style: none; }
 
 pre {
   font: inherit;
