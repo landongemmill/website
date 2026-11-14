@@ -37,7 +37,7 @@ main {
   margin: 0 auto;
   padding: 4rem 1rem;
 
-  animation: fadeIn 0.1s ease-out;
+  animation: fadeIn 0.175s ease-out;
 }
 
 /* This is for the title and nav bars and stuff */
