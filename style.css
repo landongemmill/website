@@ -19,11 +19,25 @@ body {
   background: var(--bg);
 }
 
+/* fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 /* Makes sure all of our stuff is in a nice little vertical rectangle */
 main {
   max-width: 560px;
   margin: 0 auto;
   padding: 4rem 1rem;
+
+  animation: fadeIn 0.25s ease-out;
 }
 
 /* This is for the title and nav bars and stuff */
