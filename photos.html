@@ -54,6 +54,7 @@
 
               img.addEventListener("click", function () {
                 document.getElementById("overlay-img").src = PHOTO_URL + encodeURI(name);
+                document.getElementById("overlay-img").style.background = `url("${PHOTO_URL + HIGH + encodeURI(name)}") center / cover`;
                 document.getElementById("overlay").classList.add("open");
               });
             }
