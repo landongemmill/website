@@ -142,3 +142,14 @@ pre {
   max-width: 95vw;
   max-height: 95vh;
 }
+
+/* icon stuff for the index page */
+.icon {
+  display: inline-block;
+  width: 1.35em;
+  height: 1.35em;
+  margin-right: 0.5em;
+  vertical-align: -0.35em;
+  background: currentColor;
+  mask: var(--icon) center;
+}
